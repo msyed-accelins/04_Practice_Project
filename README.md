@@ -1,1 +1,1 @@
-This is a practice project from the GitHub Actions course.
+This is a practice project from the GitHub Actions course. It is to do with workflows.
