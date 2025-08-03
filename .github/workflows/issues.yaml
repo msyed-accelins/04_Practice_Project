@@ -1,11 +1,10 @@
 name: Output GitHub Issues
 on:
-  workflow_dispatch:
   issues:
     types: [opened, edited, deleted, closed, reopened, labeled, unlabeled]
 jobs:
   github_issues:
-    runs-on: ubuntu–latest
+    runs-on: ubuntu-latest
     steps:
       - name: Output issue number (if triggered by issue)
         run: echo "Issue Number - ${{ github.event.issue.number }}"
