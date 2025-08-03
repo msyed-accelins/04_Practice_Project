@@ -1,4 +1,4 @@
-name: Deployment Workflow
+name: Deployment Workflow 1
 on: push
 jobs:
   deploy:
