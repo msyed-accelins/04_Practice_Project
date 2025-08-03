@@ -1,0 +1,27 @@
+name: Output GitHub Metdata
+on:
+  workflow_dispatch
+jobs:
+  github_metadata:
+    runs-on: ubuntu–latest
+    steps:
+      - name: Output GitHub context
+        run: echo "${{ toJSON(github) }}"
+      - name: Output event context
+        run: echo "${{ toJSON(github.event) }}"
+      - name: Output job context
+        run: echo "${{ toJSON(github.job) }}"
+      - name: Output runner context
+        run: echo "${{ toJSON(github.runner) }}"
+      - name: Output repository context
+        run: echo "${{ toJSON(github.repository) }}"
+      - name: Output workflow context
+        run: echo "${{ toJSON(github.workflow) }}"
+      - name: Output workflow run context
+        run: echo "${{ toJSON(github.run_id) }}"
+      - name: Output workflow run number
+        run: echo "${{ toJSON(github.run_number) }}"
+      - name: Output workflow run attempt
+        run: echo "${{ toJSON(github.run_attempt) }}"
+      - name: Output workflow run started at
+        run: echo "${{ toJSON(github.run_started_at) }}"
